@@ -1,0 +1,10 @@
+{
+	"id": "mit-pset-templates",
+	"name": "MIT P-set Templates",
+	"version": "1.1.0",
+	"minAppVersion": "1.7.2",
+	"description": "Create MIT problem-set notes for college classes. Pick class, P-set number, and problem count from a sidebar. Built for MIT coursework and other university psets.",
+	"author": "Dominik Bach",
+	"authorUrl": "https://github.com/mit-bach",
+	"isDesktopOnly": false
+}

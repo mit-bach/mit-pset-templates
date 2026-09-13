@@ -1,0 +1,17 @@
+.mit-pset-sidebar {
+	padding: 12px;
+}
+
+.mit-pset-sidebar-lead {
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+	margin-bottom: 12px;
+}
+
+.mit-pset-sidebar .setting-item {
+	flex-wrap: wrap;
+}
+
+.mit-pset-sidebar .setting-item-control {
+	justify-content: flex-start;
+}
