@@ -74,6 +74,19 @@ describe('renderDocument', () => {
 		const body = renderDocument(DEFAULT_SETTINGS, ctx());
 		expect(body).not.toContain('Collaborators');
 	});
+
+	it('keeps $inline$ and $$display$$ math delimiters', () => {
+		const settings = {
+			...DEFAULT_SETTINGS,
+			problemTemplate:
+				'## Problem {{problem-number}}\n\nUse `$inline$` and `$$display$$` math as needed.\n',
+		};
+		const body = renderDocument(settings, ctx({ problemCount: 2 }));
+		expect(body).toContain('`$inline$`');
+		expect(body).toContain('`$$display$$`');
+		expect(body.match(/# 6\.1200 Problem Set 3/g)?.length).toBe(1);
+		expect(body).not.toContain('$inline#');
+	});
 });
 
 describe('renderFilename', () => {

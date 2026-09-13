@@ -46,8 +46,8 @@ export function renderDocument(
 	ctx: RenderContext,
 ): string {
 	const problems = renderProblems(settings, ctx);
-	const withProblems = settings.documentTemplate.replaceAll(
-		'{{problems}}',
+	// split/join so `$` in math ($$display$$, $inline$) is not a replace pattern.
+	const withProblems = settings.documentTemplate.split('{{problems}}').join(
 		problems,
 	);
 	return applyTokens(withProblems, ctx);
