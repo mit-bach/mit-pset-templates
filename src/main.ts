@@ -97,7 +97,8 @@ export default class MitPsetTemplatesPlugin extends Plugin {
 			request,
 			new Date(),
 			(value: Date, format: string): string => {
-				return moment(value).format(format);
+				const clock = moment(value) as { format: (token: string) => string };
+				return clock.format(format);
 			},
 		);
 		const basename = renderFilename(this.settings, ctx);
