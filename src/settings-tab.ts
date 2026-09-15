@@ -78,7 +78,7 @@ export class MitPsetTemplatesSettingTab extends PluginSettingTab {
 				});
 			});
 
-		containerEl.createEl('h3', { text: 'Classes' });
+		new Setting(containerEl).setName('Classes').setHeading();
 		containerEl.createEl('p', {
 			text: 'These appear in the class dropdown when you create a P-set.',
 		});
@@ -129,28 +129,28 @@ export class MitPsetTemplatesSettingTab extends PluginSettingTab {
 			});
 		});
 
-		containerEl.createEl('h3', { text: 'Document structure' });
+		new Setting(containerEl).setName('Document structure').setHeading();
 		containerEl.createEl('p', {
 			text: 'Full note. Put {{problems}} where the generated problem sections should go.',
 		});
 		new Setting(containerEl).addTextArea((area) => {
 			area.setValue(this.plugin.settings.documentTemplate);
 			area.inputEl.rows = 12;
-			area.inputEl.style.width = '100%';
+			area.inputEl.addClass('mit-pset-template-area');
 			area.onChange(async (value: string): Promise<void> => {
 				this.plugin.settings.documentTemplate = value;
 				await this.plugin.saveSettings();
 			});
 		});
 
-		containerEl.createEl('h3', { text: 'Problem structure' });
+		new Setting(containerEl).setName('Problem structure').setHeading();
 		containerEl.createEl('p', {
 			text: 'Repeated once per problem. {{problem-number}} is 1, 2, 3, …',
 		});
 		new Setting(containerEl).addTextArea((area) => {
 			area.setValue(this.plugin.settings.problemTemplate);
 			area.inputEl.rows = 10;
-			area.inputEl.style.width = '100%';
+			area.inputEl.addClass('mit-pset-template-area');
 			area.onChange(async (value: string): Promise<void> => {
 				this.plugin.settings.problemTemplate = value;
 				await this.plugin.saveSettings();

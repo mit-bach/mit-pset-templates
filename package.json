@@ -1,6 +1,6 @@
 {
 	"name": "mit-pset-templates",
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"description": "Create MIT problem-set notes for college classes from a sidebar.",
 	"main": "main.js",
 	"type": "module",

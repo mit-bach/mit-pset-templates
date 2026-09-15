@@ -15,3 +15,7 @@
 .mit-pset-sidebar .setting-item-control {
 	justify-content: flex-start;
 }
+
+.mit-pset-template-area {
+	width: 100%;
+}

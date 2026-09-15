@@ -49,13 +49,6 @@ export default class MitPsetTemplatesPlugin extends Plugin {
 				this.openCreateModal();
 			},
 		});
-		this.app.workspace.onLayoutReady((): void => {
-			if (this.app.workspace.getLeavesOfType(PSET_VIEW_TYPE).length === 0) {
-				void this.app.workspace.ensureSideLeaf(PSET_VIEW_TYPE, 'right', {
-					reveal: false,
-				});
-			}
-		});
 	}
 
 	async saveSettings(): Promise<void> {
