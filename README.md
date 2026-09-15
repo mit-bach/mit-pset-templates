@@ -2,7 +2,7 @@
 
 Create MIT problem-set notes for college classes. Built around how P-sets work at MIT: a class, a set number, and N problems.
 
-A right sidebar (graduation cap) lets you pick class, P-set number, and problem count, then write a new note. Templates live in plugin settings, not in a templates folder.
+Open the sidebar from the graduation-cap ribbon or the **Open P-set sidebar** command. Pick class, P-set number, and problem count, then write a new note. Templates live in plugin settings, not in a templates folder. The sidebar does not open by itself.
 
 For university coursework, problem sets, homework, and other academic notes — not only 6.1200.
 
